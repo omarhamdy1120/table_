@@ -55,7 +55,7 @@
 
 <div class="text-center">
 
-<h1 class="margin-bottom50">Investment Products Comparison</h1>
+<h1 class="margin-bottom50" style="margin-right: 150px;">Investment Products Comparison</h1>
 
 </div>
 
@@ -665,38 +665,54 @@ if(rate_slima=="N/A"){
   rate_slima=0;
 }
 
+// Color Swiss Condition
+
 if(rate_swiss > rate_sam && rate_swiss > rate_btc && rate_swiss > rate_galla && rate_swiss > rate_slima){
   var color_swiss='green'
-}else{
+}else if(rate_swiss <= rate_sam && rate_swiss <= rate_btc && rate_swiss <= rate_galla && rate_swiss <= rate_slima){
   var color_swiss='red'
+}else{
+  var color_swiss='orange'
 }
 
+// Color Sam Condition
 
 if(rate_sam > rate_swiss && rate_sam > rate_btc && rate_sam > rate_galla && rate_sam > rate_slima){
   var color_sam='green'
-}else{
+}else if(rate_sam <= rate_swiss && rate_sam <= rate_btc && rate_sam <= rate_galla && rate_sam <= rate_slima){
   var color_sam='red'
+}else{
+  var color_sam='orange'
 }
 
+// Color Slima Condition
 
 if(rate_slima > rate_swiss && rate_slima > rate_btc && rate_slima > rate_galla && rate_slima > rate_sam){
   var color_slima='green'
-}else{
+}else if(rate_slima <= rate_swiss && rate_slima <= rate_btc && rate_slima <= rate_galla && rate_slima <= rate_sam){
   var color_slima='red'
+}else{
+  var color_slima='orange'
 }
 
+// Color Galla Condition
 
 if(rate_galla > rate_swiss && rate_galla > rate_btc && rate_galla > rate_sam && rate_galla > rate_slima){
   var color_galla='green'
-}else{
+}else if(rate_galla <= rate_swiss && rate_galla <= rate_btc && rate_galla <= rate_sam && rate_galla <= rate_slima){
   var color_galla='red'
+}else{
+  var color_galla='orange'
 }
 
+// Color BTC Condition
 
 if(rate_btc > rate_swiss && rate_btc > rate_sam && rate_btc > rate_galla && rate_btc > rate_slima){
   var color_btc='green'
-}else{
+}else if(rate_btc <= rate_swiss && rate_btc <= rate_sam && rate_btc <= rate_galla && rate_btc <= rate_slima){
   var color_btc='red'
+}else{
+  var color_btc='orange'
 }
 
 
