@@ -12,9 +12,7 @@
 <link rel="stylesheet" type="text/css" media="all" href="style.css">
 <link rel="stylesheet" type="text/css" media="all" href="styles.css">
 <link rel="stylesheet" type="text/css" media="all" href="styles_003.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" media="screen and (min-width: 768px)" href="styles-l.css">
-<link  rel="icon" type="image/x-icon" href="https://dahabmasr.com/media/favicon/default/logo_sca_only.png" />
 
 
 <link rel="stylesheet" type="text/css" media="all" href="styles_002.css">
@@ -23,10 +21,6 @@
 
 	</head>
 	<body id="html-body" class="width1200 wide lazy-loading-img cms-home cms-page-2 cms-index-index page-layout-1column" data-container="body" aria-busy="false">
-
-
-
-
 	
 <div class="page-wrapper">    
 
@@ -38,11 +32,15 @@
 
 
 
+
 <div class="section-builder  section-builder-full calctable">
+
+
 
 <div class="frame black-block-section">
 
 <div class="line">
+
 
 
 <div class="col-des-12 col-tb-12 col-mb-12 margin-bottom30 margin-top30 order-des-1">
@@ -51,16 +49,13 @@
 
 <div class="line  justify-content-center">
 
-<a href="index_ar.php" style="text-decoration: none;"><button type="button" class="btn btn-outline-dark" style="margin:-80px; margin-bottom: 80px;color:gold;font-weight:bold;">AR</button></a>
-
 <div class="panel-block-row  panel-block col-des-12 block762 col-tb-12 col-mb-12">
 
-
-<div style="margin-left:100px;">
+<div style="padding: 30px;">
 
 <div class="text-center">
 
-<h1 class="margin-bottom50" style="text-align:center;margin-right: 150px;">Investment Products Comparison</h1>
+<h1 class="margin-bottom50" style="margin-right: 150px;">Investment Products Comparison</h1>
 
 </div>
 
@@ -68,12 +63,31 @@
 
 </div>
 
-<div class="col-des-6 col-tb-6 col-mb-12 margin-bottom30 order-des-1 calculate" style="width: 45%;margin-left: 390px;">
+<div class="col-des-6 col-tb-6 col-mb-12 margin-bottom30 order-des-1 calculate" style="width: 50%; margin-left:300px;">
 <div class="line">
 <div class="panel-block-row  panel-block col-des-12 block763 col-tb-12 col-mb-12">
 <div class="text-center">
 
 <h3 class="margin-bottom15">Insert Your Product Here</h3>
+<div class="block-note margin-bottom10">Smart Comparison</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -89,7 +103,7 @@
 
 
 
-<select class="bottom5 asset-class-dd input" data-index="1" required="true" data-validate="{'required':true}" name="Product0" id="Product0" value="" tabindex="3"style="width: 70%;">
+<select class="bottom5 asset-class-dd input" data-index="1" required="true" data-validate="{'required':true}" name="Product0" id="Product0" value="" tabindex="3">
 
 <option selected="selected" disabled="disabled">Select Product</option>
 
@@ -164,13 +178,13 @@ while( $rows = mysqli_fetch_assoc($resultset) ) { ?>
 
 
 
-<button class="action btn btn-primary btn-sm" id="CalculatorSubmit" type="submit" title="compersion" disabled="disabled" style="display: none;">
+<button class="action btn btn-primary btn-sm" id="CalculatorSubmit" type="submit" title="Calculate" disabled="disabled" style="display: none;">
 
 </button>
 
-<button class="add_form_field action btn btn-dark btn-sm input">Add Another Product&nbsp; 
+<button class="add_form_field action btn btn-secondary btn-sm input">Add Another Product&nbsp; 
 
-      <span style="font-size:16px; font-weight:bold;">+</span>
+      <span style="font-size:16px; font-weight:bold;">+ </span>
 
     </button>	
 
@@ -211,7 +225,7 @@ while( $rows = mysqli_fetch_assoc($resultset) ) { ?>
 
 <div class="text-center">
 
-<h3 class="margin-bottom15" style="padding-top: 20px;">Your Investment Real-Time Value</h3>
+<h3 class="margin-bottom15">Your Investment Real-Time Value</h3>
 
 <table class="sub-title margin-bottom10 text-left calculator hidden-tb hidden-mb" border="1">
 
@@ -219,12 +233,12 @@ while( $rows = mysqli_fetch_assoc($resultset) ) { ?>
 
 <tr>
 
-<th class="swiss text-center" colspan="6" width="5%"><img src="swiss.png" alt="Swiss Gold" width="90" height="40"></th>
+<th class="swiss text-center" colspan="6" width="5%">Swiss Gold</th>
 
-<th class="sam text-center" colspan="6" width="5%"><img src="sam.png" alt="Swiss Gold" width="90" height="40"></th>
-<th class="slima text-center" colspan="6" width="5%"><img src="selema.png" alt="Swiss Gold" width="90" height="40"></th>
-<th class="galla text-center" colspan="6" width="5%"><img src="galla.png" alt="Swiss Gold" width="90" height="40"></th>
-<th class="btc text-center" colspan="6" width="5%"><img src="btc.png" alt="Swiss Gold" width="90" height="40"></th>
+<th class="sam text-center" colspan="6" width="5%">Sam Gold</th>
+<th class="slima text-center" colspan="6" width="5%">Slima Gold</th>
+<th class="galla text-center" colspan="6" width="5%">El Galla Gold</th>
+<th class="btc text-center" colspan="6" width="5%">BTC Gold</th>
 
 
 </tr>
@@ -248,7 +262,7 @@ while( $rows = mysqli_fetch_assoc($resultset) ) { ?>
 
 <th>Cash Back</th>
 
-<th>Rate%</th>
+<th>%</th>
 
 </tr>
 
@@ -275,11 +289,11 @@ while( $rows = mysqli_fetch_assoc($resultset) ) { ?>
 <tr>
 
 <th>Product</th>
-<th>Making Charges</th>
+<th>Making charges</th>
 
 <th>Cash Back</th>
 
-<th>Rate%</th>
+<th>%</th>
 
 
 
@@ -309,11 +323,11 @@ while( $rows = mysqli_fetch_assoc($resultset) ) { ?>
 <tr>
 
 <th>Product</th>
-<th>Making Charges</th>
+<th>Making charges</th>
 
 <th>Cash Back</th>
 
-<th>Rate%</th>
+<th>%</th>
 
 
 
@@ -342,11 +356,11 @@ while( $rows = mysqli_fetch_assoc($resultset) ) { ?>
 <tr>
 
 <th>Product</th>
-<th>Making Charges</th>
+<th>Making charges</th>
 
 <th>Cash Back</th>
 
-<th>Rate%</th>
+<th>%</th>
 
 
 
@@ -374,11 +388,11 @@ while( $rows = mysqli_fetch_assoc($resultset) ) { ?>
 <tr>
 
 <th>Product</th>
-<th>Making Charges</th>
+<th>Making charges</th>
 
 <th>Cash Back</th>
 
-<th>Rate%</th>
+<th>%</th>
 
 
 
@@ -582,11 +596,26 @@ function checkInputs() {
   return isValid;
 }
 
+function Calculate() {
+
+  var isValid = true;
+  $('select').filter('[required]').each(function() {
+    if ($(this).val() === '' || $(this).val() === null) {
+      $('#CalculatorSubmit').prop('disabled', true)
+      isValid = false;
+      return false;
+    }
+  });
+  if(isValid) {$('#CalculatorSubmit').prop('disabled', false)}
+  return isValid;
+}
 
 
 $.getJSON("data.json", function(data) {
 
 checkInputs();
+
+$('#loadTable').prop('style', 'opacity:1;');
 
 
 $(document).change( function (e) {
@@ -639,88 +668,63 @@ if(rate_slima=="N/A"){
 // Color Swiss Condition
 
 if(rate_swiss > rate_sam && rate_swiss > rate_btc && rate_swiss > rate_galla && rate_swiss > rate_slima){
-
   var color_swiss='green'
-
 }else if(rate_swiss <= rate_sam && rate_swiss <= rate_btc && rate_swiss <= rate_galla && rate_swiss <= rate_slima){
-
   var color_swiss='red'
-
 }else{
-
   var color_swiss='orange'
 }
 
 // Color Sam Condition
 
 if(rate_sam > rate_swiss && rate_sam > rate_btc && rate_sam > rate_galla && rate_sam > rate_slima){
-
   var color_sam='green'
-
 }else if(rate_sam <= rate_swiss && rate_sam <= rate_btc && rate_sam <= rate_galla && rate_sam <= rate_slima){
-
   var color_sam='red'
-
 }else{
-
   var color_sam='orange'
 }
 
 // Color Slima Condition
 
 if(rate_slima > rate_swiss && rate_slima > rate_btc && rate_slima > rate_galla && rate_slima > rate_sam){
-
   var color_slima='green'
-
 }else if(rate_slima <= rate_swiss && rate_slima <= rate_btc && rate_slima <= rate_galla && rate_slima <= rate_sam){
-
   var color_slima='red'
-
 }else{
-
   var color_slima='orange'
 }
 
 // Color Galla Condition
 
 if(rate_galla > rate_swiss && rate_galla > rate_btc && rate_galla > rate_sam && rate_galla > rate_slima){
-
   var color_galla='green'
-
 }else if(rate_galla <= rate_swiss && rate_galla <= rate_btc && rate_galla <= rate_sam && rate_galla <= rate_slima){
-
   var color_galla='red'
-
 }else{
-
   var color_galla='orange'
 }
 
 // Color BTC Condition
 
 if(rate_btc > rate_swiss && rate_btc > rate_sam && rate_btc > rate_galla && rate_btc > rate_slima){
-
   var color_btc='green'
-
 }else if(rate_btc <= rate_swiss && rate_btc <= rate_sam && rate_btc <= rate_galla && rate_btc <= rate_slima){
-
   var color_btc='red'
-
 }else{
-  
   var color_btc='orange'
 }
 
 
-$(TableSwiss).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="product'+ i +'">'+ ProductName +'</div></td><td><div id="mc-Swiss'+ i +'">'+ mc_swiss +'</div></td><td><div id="cashback-Swiss'+ i +'">'+ cashback_swiss +'</div></td><td><div class="'+ color_swiss +'"  id="rate-Swiss'+ i +'">'+ rate_swiss +' %</div></td></tr>');
+$(TableSwiss).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="product'+ i +'">'+ ProductName +'</div></td><td><div id="mc-Swiss'+ i +'">'+ mc_swiss +'</div></td><td><div id="cashback-Swiss'+ i +'">'+ cashback_swiss +'</div></td><td><div class="'+ color_swiss +'"  id="rate-Swiss'+ i +'">'+ rate_swiss +'</div></td></tr>');
 
-$(TableSam).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="product'+ i +'">'+ ProductName +'</div></td><td><div id="mc-Sam'+ i +'">'+ mc_sam +'</div></td><td><div id="cashback-Sam'+ i +'">'+ cashback_sam +'</div></td><td><div class="'+ color_sam +'"  id="rate-Sam'+ i +'">'+ rate_sam +' %</div></td></tr>');
+$(TableSam).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="product'+ i +'">'+ ProductName +'</div></td><td><div id="mc-Sam'+ i +'">'+ mc_sam +'</div></td><td><div id="cashback-Sam'+ i +'">'+ cashback_sam +'</div></td><td><div class="'+ color_sam +'"  id="rate-Sam'+ i +'">'+ rate_sam +'</div></td></tr>');
 
-$(TableSlima).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="product'+ i +'">'+ ProductName +'</div></td><td><div id="mc-Slima'+ i +'">'+ mc_slima +'</div></td><td><div id="cashback-Slima'+ i +'">'+ cashback_slima +'</div></td><td><div class="'+ color_slima +'"  id="rate-Slima'+ i +'">'+ rate_slima +' %</div></td></tr>');
+$(TableSlima).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="product'+ i +'">'+ ProductName +'</div></td><td><div id="mc-Slima'+ i +'">'+ mc_slima +'</div></td><td><div id="cashback-Slima'+ i +'">'+ cashback_slima +'</div></td><td><div class="'+ color_slima +'"  id="rate-Slima'+ i +'">'+ rate_slima +'</div></td></tr>');
 
-$(TableGalla).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="product'+ i +'">'+ ProductName +'</div></td><td><div id="mc-Galla'+ i +'">'+ mc_galla +'</div></td><td><div id="cashback-Galla'+ i +'">'+ cashback_galla +'</div></td><td><div class="'+ color_galla +'"  id="rate-Galla'+ i +'">'+ rate_galla +' %</div></td><</tr>');
+$(TableGalla).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="product'+ i +'">'+ ProductName +'</div></td><td><div id="mc-Galla'+ i +'">'+ mc_galla +'</div></td><td><div id="cashback-Galla'+ i +'">'+ cashback_galla +'</div></td><td><div class="'+ color_galla +'"  id="rate-Galla'+ i +'">'+ rate_galla +'</div></td><</tr>');
 
-$(TableBtc).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="product'+ i +'">'+ ProductName +'</div></td><td><div id="mc-Btc'+ i +'">'+ mc_btc +'</div></td><td><div id="cashback-Btc'+ i +'">'+ cashback_btc +'</div></td><td><div class="'+ color_btc +'"  id="rate-Btc'+ i +'">'+ rate_btc +' %</div></td></tr>');
+$(TableBtc).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="product'+ i +'">'+ ProductName +'</div></td><td><div id="mc-Btc'+ i +'">'+ mc_btc +'</div></td><td><div id="cashback-Btc'+ i +'">'+ cashback_btc +'</div></td><td><div class="'+ color_btc +'"  id="rate-Btc'+ i +'">'+ rate_btc +'</div></td></tr>');
 
 }
 
@@ -736,7 +740,7 @@ $(TableBtc).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><t
         if (x < max_fields) {
             x++;
 
-          $(wrapper).append('<div class="col-des-5 col-tb-5 col-mb-12 margin-bottom5 appended'+ x +' order-des-1"><select class="bottom5 asset-class-dd input" data-index="'+ x +'" required="true" name="Product'+ x +'" id="Product'+ x +'" value="" tabindex="'+ x +'" required style="width: 70%;"><option selected disabled>Select Product</option><optgroup label="Coins"><?php $sql = "SELECT * FROM coins"; $resultset = mysqli_query($conn, $sql); while( $rows = mysqli_fetch_assoc($resultset) ) { ?><option value="<?php echo $rows["id"]; ?>" data-mcSwiss="<?php echo $rows["mc_swiss"]; ?>" data-mcSam="<?php echo $rows["mc_sam"]; ?>" data-mcSlima="<?php echo $rows["mc_slima"]; ?>" data-mcGalla="<?php echo $rows["mc_galla"]; ?>" data-mcBtc="<?php echo $rows["mc_btc"]; ?>"data-cashbackSwiss="<?php echo $rows["cashback_swiss"]; ?>"data-cashbackSam="<?php echo $rows["cashback_sam"]; ?>"data-cashbackSlima="<?php echo $rows["cashback_slima"]; ?>"data-cashbackGalla="<?php echo $rows["cashback_galla"]; ?>"data-cashbackBtc="<?php echo $rows["cashback_btc"]; ?>"data-rateSwiss="<?php echo $rows["rate_swiss"]; ?>"data-rateSam="<?php echo $rows["rate_sam"]; ?>"data-rateSlima="<?php echo $rows["rate_slima"]; ?>"data-rateGalla="<?php echo $rows["rate_galla"]; ?>"data-rateBtc="<?php echo $rows["rate_btc"]; ?>" data-ProductID="<?php echo $rows["id"]; ?>"  data-ProductName="<?php echo $rows["product"]; ?>"><?php echo $rows["product"]; ?></option><?php }	?></optgroup><optgroup label="Small Ingots"><?php $sql = "SELECT * FROM small"; $resultset = mysqli_query($conn, $sql); while( $rows = mysqli_fetch_assoc($resultset) ) { ?><option value="<?php echo $rows["id"]; ?>" data-mcSwiss="<?php echo $rows["mc_swiss"]; ?>" data-mcSam="<?php echo $rows["mc_sam"]; ?>" data-mcSlima="<?php echo $rows["mc_slima"]; ?>" data-mcGalla="<?php echo $rows["mc_galla"]; ?>" data-mcBtc="<?php echo $rows["mc_btc"]; ?>"data-cashbackSwiss="<?php echo $rows["cashback_swiss"]; ?>"data-cashbackSam="<?php echo $rows["cashback_sam"]; ?>"data-cashbackSlima="<?php echo $rows["cashback_slima"]; ?>"data-cashbackGalla="<?php echo $rows["cashback_galla"]; ?>"data-cashbackBtc="<?php echo $rows["cashback_btc"]; ?>"data-rateSwiss="<?php echo $rows["rate_swiss"]; ?>"data-rateSam="<?php echo $rows["rate_sam"]; ?>"data-rateSlima="<?php echo $rows["rate_slima"]; ?>"data-rateGalla="<?php echo $rows["rate_galla"]; ?>"data-rateBtc="<?php echo $rows["rate_btc"]; ?>" data-ProductID="<?php echo $rows["id"]; ?>"  data-ProductName="<?php echo $rows["product"]; ?>"><?php echo $rows["product"]; ?></option><?php }	?></optgroup><optgroup label="Large Ingots"><?php $sql = "SELECT * FROM large"; $resultset = mysqli_query($conn, $sql); while( $rows = mysqli_fetch_assoc($resultset) ) { ?><option value="<?php echo $rows["id"]; ?>" data-mcSwiss="<?php echo $rows["mc_swiss"]; ?>" data-mcSam="<?php echo $rows["mc_sam"]; ?>" data-mcSlima="<?php echo $rows["mc_slima"]; ?>" data-mcGalla="<?php echo $rows["mc_galla"]; ?>" data-mcBtc="<?php echo $rows["mc_btc"]; ?>"data-cashbackSwiss="<?php echo $rows["cashback_swiss"]; ?>"data-cashbackSam="<?php echo $rows["cashback_sam"]; ?>"data-cashbackSlima="<?php echo $rows["cashback_slima"]; ?>"data-cashbackGalla="<?php echo $rows["cashback_galla"]; ?>"data-cashbackBtc="<?php echo $rows["cashback_btc"]; ?>"data-rateSwiss="<?php echo $rows["rate_swiss"]; ?>"data-rateSam="<?php echo $rows["rate_sam"]; ?>"data-rateSlima="<?php echo $rows["rate_slima"]; ?>"data-rateGalla="<?php echo $rows["rate_galla"]; ?>"data-rateBtc="<?php echo $rows["rate_btc"]; ?>" data-ProductID="<?php echo $rows["id"]; ?>"  data-ProductName="<?php echo $rows["product"]; ?>"><?php echo $rows["product"]; ?></option><?php }	?></optgroup><optgroup label="Gold Bars"><?php $sql = "SELECT * FROM bar";$resultset = mysqli_query($conn, $sql);while( $rows = mysqli_fetch_assoc($resultset) ) { ?><option value="<?php echo $rows["id"]; ?>" data-mcSwiss="<?php echo $rows["mc_swiss"]; ?>" data-mcSam="<?php echo $rows["mc_sam"]; ?>" data-mcSlima="<?php echo $rows["mc_slima"]; ?>" data-mcGalla="<?php echo $rows["mc_galla"]; ?>" data-mcBtc="<?php echo $rows["mc_btc"]; ?>"data-cashbackSwiss="<?php echo $rows["cashback_swiss"]; ?>"data-cashbackSam="<?php echo $rows["cashback_sam"]; ?>"data-cashbackSlima="<?php echo $rows["cashback_slima"]; ?>"data-cashbackGalla="<?php echo $rows["cashback_galla"]; ?>"data-cashbackBtc="<?php echo $rows["cashback_btc"]; ?>"data-rateSwiss="<?php echo $rows["rate_swiss"]; ?>"data-rateSam="<?php echo $rows["rate_sam"]; ?>"data-rateSlima="<?php echo $rows["rate_slima"]; ?>"data-rateGalla="<?php echo $rows["rate_galla"]; ?>"data-rateBtc="<?php echo $rows["rate_btc"]; ?>"data-ProductID="<?php echo $rows["id"]; ?>" data-ProductName="<?php echo $rows["product"]; ?>"><?php echo $rows["product"]; ?></option><?php }	?></optgroup></select></div><button class="btn btn-outline-danger delete col-des-1 col-tb-1 col-mb-1 margin-bottom5  appended'+ x +' order-des-1">  X  </button>');
+          $(wrapper).append('<div class="col-des-5 col-tb-5 col-mb-12 margin-bottom5 appended'+ x +' order-des-1"><select class="bottom5 asset-class-dd input" data-index="'+ x +'" required="true" name="Product'+ x +'" id="Product'+ x +'" value="" tabindex="'+ x +'" required><option selected disabled>Select Product</option><optgroup label="Coins"><?php $sql = "SELECT * FROM coins"; $resultset = mysqli_query($conn, $sql); while( $rows = mysqli_fetch_assoc($resultset) ) { ?><option value="<?php echo $rows["id"]; ?>" data-mcSwiss="<?php echo $rows["mc_swiss"]; ?>" data-mcSam="<?php echo $rows["mc_sam"]; ?>" data-mcSlima="<?php echo $rows["mc_slima"]; ?>" data-mcGalla="<?php echo $rows["mc_galla"]; ?>" data-mcBtc="<?php echo $rows["mc_btc"]; ?>"data-cashbackSwiss="<?php echo $rows["cashback_swiss"]; ?>"data-cashbackSam="<?php echo $rows["cashback_sam"]; ?>"data-cashbackSlima="<?php echo $rows["cashback_slima"]; ?>"data-cashbackGalla="<?php echo $rows["cashback_galla"]; ?>"data-cashbackBtc="<?php echo $rows["cashback_btc"]; ?>"data-rateSwiss="<?php echo $rows["rate_swiss"]; ?>"data-rateSam="<?php echo $rows["rate_sam"]; ?>"data-rateSlima="<?php echo $rows["rate_slima"]; ?>"data-rateGalla="<?php echo $rows["rate_galla"]; ?>"data-rateBtc="<?php echo $rows["rate_btc"]; ?>" data-ProductID="<?php echo $rows["id"]; ?>"  data-ProductName="<?php echo $rows["product"]; ?>"><?php echo $rows["product"]; ?></option><?php }	?></optgroup><optgroup label="Small Ingots"><?php $sql = "SELECT * FROM small"; $resultset = mysqli_query($conn, $sql); while( $rows = mysqli_fetch_assoc($resultset) ) { ?><option value="<?php echo $rows["id"]; ?>" data-mcSwiss="<?php echo $rows["mc_swiss"]; ?>" data-mcSam="<?php echo $rows["mc_sam"]; ?>" data-mcSlima="<?php echo $rows["mc_slima"]; ?>" data-mcGalla="<?php echo $rows["mc_galla"]; ?>" data-mcBtc="<?php echo $rows["mc_btc"]; ?>"data-cashbackSwiss="<?php echo $rows["cashback_swiss"]; ?>"data-cashbackSam="<?php echo $rows["cashback_sam"]; ?>"data-cashbackSlima="<?php echo $rows["cashback_slima"]; ?>"data-cashbackGalla="<?php echo $rows["cashback_galla"]; ?>"data-cashbackBtc="<?php echo $rows["cashback_btc"]; ?>"data-rateSwiss="<?php echo $rows["rate_swiss"]; ?>"data-rateSam="<?php echo $rows["rate_sam"]; ?>"data-rateSlima="<?php echo $rows["rate_slima"]; ?>"data-rateGalla="<?php echo $rows["rate_galla"]; ?>"data-rateBtc="<?php echo $rows["rate_btc"]; ?>" data-ProductID="<?php echo $rows["id"]; ?>"  data-ProductName="<?php echo $rows["product"]; ?>"><?php echo $rows["product"]; ?></option><?php }	?></optgroup><optgroup label="Large Ingots"><?php $sql = "SELECT * FROM large"; $resultset = mysqli_query($conn, $sql); while( $rows = mysqli_fetch_assoc($resultset) ) { ?><option value="<?php echo $rows["id"]; ?>" data-mcSwiss="<?php echo $rows["mc_swiss"]; ?>" data-mcSam="<?php echo $rows["mc_sam"]; ?>" data-mcSlima="<?php echo $rows["mc_slima"]; ?>" data-mcGalla="<?php echo $rows["mc_galla"]; ?>" data-mcBtc="<?php echo $rows["mc_btc"]; ?>"data-cashbackSwiss="<?php echo $rows["cashback_swiss"]; ?>"data-cashbackSam="<?php echo $rows["cashback_sam"]; ?>"data-cashbackSlima="<?php echo $rows["cashback_slima"]; ?>"data-cashbackGalla="<?php echo $rows["cashback_galla"]; ?>"data-cashbackBtc="<?php echo $rows["cashback_btc"]; ?>"data-rateSwiss="<?php echo $rows["rate_swiss"]; ?>"data-rateSam="<?php echo $rows["rate_sam"]; ?>"data-rateSlima="<?php echo $rows["rate_slima"]; ?>"data-rateGalla="<?php echo $rows["rate_galla"]; ?>"data-rateBtc="<?php echo $rows["rate_btc"]; ?>" data-ProductID="<?php echo $rows["id"]; ?>"  data-ProductName="<?php echo $rows["product"]; ?>"><?php echo $rows["product"]; ?></option><?php }	?></optgroup><optgroup label="Gold Bars"><?php $sql = "SELECT * FROM bar";$resultset = mysqli_query($conn, $sql);while( $rows = mysqli_fetch_assoc($resultset) ) { ?><option value="<?php echo $rows["id"]; ?>" data-mcSwiss="<?php echo $rows["mc_swiss"]; ?>" data-mcSam="<?php echo $rows["mc_sam"]; ?>" data-mcSlima="<?php echo $rows["mc_slima"]; ?>" data-mcGalla="<?php echo $rows["mc_galla"]; ?>" data-mcBtc="<?php echo $rows["mc_btc"]; ?>"data-cashbackSwiss="<?php echo $rows["cashback_swiss"]; ?>"data-cashbackSam="<?php echo $rows["cashback_sam"]; ?>"data-cashbackSlima="<?php echo $rows["cashback_slima"]; ?>"data-cashbackGalla="<?php echo $rows["cashback_galla"]; ?>"data-cashbackBtc="<?php echo $rows["cashback_btc"]; ?>"data-rateSwiss="<?php echo $rows["rate_swiss"]; ?>"data-rateSam="<?php echo $rows["rate_sam"]; ?>"data-rateSlima="<?php echo $rows["rate_slima"]; ?>"data-rateGalla="<?php echo $rows["rate_galla"]; ?>"data-rateBtc="<?php echo $rows["rate_btc"]; ?>"data-ProductID="<?php echo $rows["id"]; ?>" data-ProductName="<?php echo $rows["product"]; ?>"><?php echo $rows["product"]; ?></option><?php }	?></optgroup></select></div><button class="delete col-des-1 col-tb-1 col-mb-1 margin-bottom5  appended'+ x +' order-des-1">X</button>');
 
         }else {
           alert('You Reached the limits')

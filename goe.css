@@ -1,3 +1,10 @@
+*{
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 .tab-content {
 	border: none !important;
 }
@@ -9,18 +16,14 @@
 	background: rgba(0,0,0,0.4);
 	padding: 35px !important;
 }
-input[name="postcode"],input[name="zip"]{
-    display: none;
-}
+
 .cms-home .mgs-owl-carousel .price {
 	color: #fff;
 }
 header.page-header {
 	z-index: 20 !important;
 }
-div[name="shippingAddress.postcode"],div[name="shippingAddress.zip"],.field.zip.required, .field.region.required {
-	display: none !important;
-}
+
 .opc-wrapper .form-login .fieldset .note, .opc-wrapper .form-shipping-address .fieldset .note {
 	float: left;
 }
@@ -30,9 +33,6 @@ div[name="shippingAddress.postcode"],div[name="shippingAddress.zip"],.field.zip.
 	width: 100%;
 	margin-bottom: 0;
 	z-index: 2;
-}
-.published-by {
-	display: none !important;
 }
 .action.primary span {
 	color: #000;
@@ -141,8 +141,8 @@ table.currentProduct .currentproduct-inner {
 table.pastProduct .pastProduct-inner {
 	background: #ffe1e1;
 }
-.red{color:red;}
-.green{color:green;}
+.red{color:rgb(221, 25, 25);}
+.green{color:rgb(24, 131, 24);}
 .orange{color:rgb(255, 81, 0);}
 .line.appended {
 	padding: 0;
@@ -168,7 +168,7 @@ div.calculate {
   box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.3);
 }
 .frame.black-block-section div.calculate .order-des-1 {
-  padding: 5px;
+  padding: 5px 15px;
 }
 .exits-lg-mb .mobile-logo{max-width:150px; }
 .breadcrumbs {
@@ -193,21 +193,23 @@ header.page-header .header-area.active-sticky.scrolling .logo .default-logo, hea
 	display: none;
 }
 .layout_type1.page-title-wrapper {
-	background: url('/pub/media/wysiwyg/background/gold-of-egypt-logo-pattern-opacity-30.png') no-repeat,url('/pub/media/wysiwyg/background/gold-of-egypt-logo-pattern-opacity-30.png') no-repeat;
+	background: url('gold-of-egypt-logo-pattern-opacity-30.png') no-repeat;
 	/* padding-top: 100px; */
 	/* padding-bottom: 50px; */
 	background-color: #000;
 	background-size: 56% auto, 50% auto;
 	background-position: 150% 72%,-15% 32%;
+	background-attachment: fixed;
 }
 .section-builder.section-builder-full.calctable {
-	background: url('/pub/media/wysiwyg/background/gold-of-egypt-logo-pattern-opacity-30.png') -70% 200% no-repeat,url('/pub/media/wysiwyg/background/gold-of-egypt-logo-pattern-opacity-30.png') 150% -150% no-repeat;
+	background: url('gold-of-egypt-logo-pattern-opacity-30.png') 150% -150% no-repeat;
 	padding-top: 100px;
-	padding-bottom: 50px;
+	padding-bottom: 99px;
 	background-color: #000;
 	background-size: 56% auto, 50% auto;
 	padding-left: 70px;
 	padding-right: 70px;
+	background-attachment: fixed;
 }
 .action.primary.small.range-slider-action {
 	background: #000 !important;
@@ -371,4 +373,11 @@ header.page-header .active-sticky-mb .menu-wrapper {
 }
 .category-image {
 	display: none;
+}
+img{
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
