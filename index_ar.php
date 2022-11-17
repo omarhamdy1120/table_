@@ -19,6 +19,7 @@
 
 
 <link rel="stylesheet" type="text/css" media="all" href="styles_002.css">
+<link rel="stylesheet" type="text/css" media="all" href="claue_styles.css">
 
 <link rel="stylesheet" type="text/css" media="all" href="goe.css">
 
@@ -52,15 +53,15 @@
 
 <div class="line  justify-content-center">
 
-<a href="index.php" style="text-decoration: none;"><button type="button" class="btn btn-outline-dark" style="margin:-80px; margin-bottom: 80px;color:gold;font-weight:bold;">EN</button></a>
+<a href="index.php" style="text-decoration: none;"><button type="button" class="btn btn-outline-dark" >EN</button></a>
 
 <div class="panel-block-row  panel-block col-des-12 block762 col-tb-12 col-mb-12">
 
-<div style="margin-left:100px;">
+<div >
 
 <div class="text-center">
 
-<h1 class="margin-bottom50" style="text-align:center;margin-right: 150px;">مقارنة المنتجات الإستثمارية</h1>
+<h1 class="margin-bottom50" >مقارنة المنتجات الإستثمارية</h1>
 
 </div>
 
@@ -68,7 +69,7 @@
 
 </div>
 
-<div class="col-des-6 col-tb-6 col-mb-12 margin-bottom30 order-des-1 calculate" style="width: 45%;margin-left: 390px;">
+<div class="col-des-6 col-tb-6 col-mb-12 margin-bottom30 order-des-1 calculate">
 <div class="line">
 <div class="panel-block-row  panel-block col-des-12 block763 col-tb-12 col-mb-12">
 <div class="text-center">
@@ -85,7 +86,7 @@
 
 
 
-<div class="col-des-5 col-tb-5 col-mb-12 margin-bottom5  order-des-1">
+<div class="col-des-12 col-tb-12 col-mb-12 margin-bottom5  order-des-1">
 
 
 
@@ -94,19 +95,27 @@
 <option selected="selected" disabled="disabled">Select Product</option>
 
 <optgroup label="Coins" class="coins0">
+
   <!--This Coins Data-->
+
 </optgroup>
 
 <optgroup label="Small Ingots" class="smal0">
+
   <!--This Small Data-->
+
 </optgroup>
 
 <optgroup label="Large Ingots" class="large0">
 
   <!--This Large Data-->
+
 </optgroup>
 
 <optgroup label="Gold Bars" class="bar0">
+
+    <!--This Bar Data-->
+
 </optgroup>
 
 </select>
@@ -170,22 +179,22 @@
 
 <div>
 
-<div class="text-center">
+<div class="text-center" style="overflow-x:auto;">
 
-<h3 class="margin-bottom15" style="padding-top: 20px;">قيمة الإستثمار في الوقت الحقيقي</h3>
+<h3 class="margin-bottom15">قيمة الإستثمار في الوقت الحقيقي</h3>
 
-<table class="sub-title margin-bottom10 text-left calculator hidden-tb hidden-mb" border="1">
+<table class="sub-title margin-bottom10 text-left calculator" border="1">
 
 <thead>
 
 <tr>
 
-<th class="swiss text-center" colspan="6" width="5%"><img src="swiss.png" alt="Swiss Gold" width="90" height="40"></th>
+<th class="swiss text-center" colspan="6" width="50%"><img src="swiss.png" alt="Swiss Gold" width="90" height="40"></th>
 
-<th class="sam text-center" colspan="6" width="5%"><img src="sam.png" alt="sam Gold" width="90" height="40"></th>
-<th class="slima text-center" colspan="6" width="5%"><img src="selema.png" alt="selema Gold" width="90" height="40"></th>
-<th class="galla text-center" colspan="6" width="5%"><img src="galla.png" alt="galla Gold" width="90" height="40"></th>
-<th class="btc text-center" colspan="6" width="5%"><img src="btc.png" alt="btc Gold" width="90" height="40"></th>
+<th class="sam text-center" colspan="6" width="50%"><img src="sam.png" alt="sam Gold" width="90" height="40"></th>
+<th class="slima text-center" colspan="6" width="50%"><img src="selema.png" alt="selema Gold" width="90" height="40"></th>
+<th class="galla text-center" colspan="6" width="50%"><img src="galla.png" alt="galla Gold" width="90" height="40"></th>
+<th class="btc text-center" colspan="6" width="50%"><img src="btc.png" alt="btc Gold" width="90" height="40"></th>
 
 
 </tr>
@@ -524,45 +533,45 @@ var DivTest = $("#calcs");
 var add_button = $(".add_form_field");
 var x = 0;
 
-//call Product Data From Json
+// Call Product Data From Json
 
-//Coins
+// Coins
 
 $.getJSON("coins.json", function(data) {
   var recordid = '';
     $.each(data, function(key, value) {
-      recordid += '<option value="'+value.id+'"data-mcswiss="'+value.mc_swiss+'" data-mcsam="'+value.mc_sam+'" data-mcslima="'+value.mc_slima+'" data-mcgalla="'+value.mc_galla+'" data-mcbtc="'+value.mc_btc+'" data-cashbackswiss="'+ value.cashback_swiss+'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima+'" data-cashbackgalla="'+ value.cashback_galla+'" data-cashbackbtc="'+ value.cashback_btc+'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima+'" data-rategalla="'+ value.rate_galla+'" data-ratebtc="'+ value.rate_btc+'" data-ProductID="'+value.id+'"data-ProductName="'+value.product+'">'+value.product+'</option></optgroup>';
+      recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam +'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+value.product +'</option></optgroup>';
     });
 $(".coins"+x).append(recordid);
 });
 
-//Small Ingots
+// Small Ingots
 
 $.getJSON("smal.json", function(data) {
   var recordid = '';
     $.each(data, function(key, value) {
-      recordid += '<option value="'+value.id+'"data-mcswiss="'+value.mc_swiss+'" data-mcsam="'+value.mc_sam+'" data-mcslima="'+value.mc_slima+'" data-mcgalla="'+value.mc_galla+'" data-mcbtc="'+value.mc_btc+'" data-cashbackswiss="'+ value.cashback_swiss+'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima+'" data-cashbackgalla="'+ value.cashback_galla+'" data-cashbackbtc="'+ value.cashback_btc+'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima+'" data-rategalla="'+ value.rate_galla+'" data-ratebtc="'+ value.rate_btc+'" data-ProductID="'+value.id+'"data-ProductName="'+value.product+'">'+value.product+'</option></optgroup>';
+      recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam  +'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
     });
 $(".smal"+x).append(recordid);
 });
 
-//Large Ingots
+// Large Ingots
 
 $.getJSON("large.json", function(data) {
   var recordid = '';
     $.each(data, function(key, value) {
-      recordid += '<option value="'+value.id+'"data-mcswiss="'+value.mc_swiss+'" data-mcsam="'+value.mc_sam+'" data-mcslima="'+value.mc_slima+'" data-mcgalla="'+value.mc_galla+'" data-mcbtc="'+value.mc_btc+'" data-cashbackswiss="'+ value.cashback_swiss+'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima+'" data-cashbackgalla="'+ value.cashback_galla+'" data-cashbackbtc="'+ value.cashback_btc+'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima+'" data-rategalla="'+ value.rate_galla+'" data-ratebtc="'+ value.rate_btc+'" data-ProductID="'+value.id+'"data-ProductName="'+value.product+'">'+value.product+'</option></optgroup>';
+      recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam +'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
     });
 $(".large"+x).append(recordid);
 });
 
 
-//Bar Ingots
+// Bar Ingots
 
 $.getJSON("bar.json", function(data) {
   var recordid = '';
     $.each(data, function(key, value) {
-      recordid += '<option value="'+value.id+'"data-mcswiss="'+value.mc_swiss+'" data-mcsam="'+value.mc_sam+'" data-mcslima="'+value.mc_slima+'" data-mcgalla="'+value.mc_galla+'" data-mcbtc="'+value.mc_btc+'" data-cashbackswiss="'+ value.cashback_swiss+'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima+'" data-cashbackgalla="'+ value.cashback_galla+'" data-cashbackbtc="'+ value.cashback_btc+'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima+'" data-rategalla="'+ value.rate_galla+'" data-ratebtc="'+ value.rate_btc+'" data-ProductID="'+value.id+'"data-ProductName="'+value.product+'">'+value.product+'</option></optgroup>';
+      recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam +'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
     });
 $(".bar"+x).append(recordid);
 });
@@ -619,6 +628,8 @@ var rate_sam =  $('select[name=Product'+ i +']').find('option:selected').data('r
 var rate_slima =  $('select[name=Product'+ i +']').find('option:selected').data('rateslima');
 var rate_galla =  $('select[name=Product'+ i +']').find('option:selected').data('rategalla');
 var rate_btc =  $('select[name=Product'+ i +']').find('option:selected').data('ratebtc');
+
+// Change N/A to Make it Integer
 
 if(rate_swiss=="N/A"){
   rate_swiss=0;
@@ -711,6 +722,7 @@ if(rate_btc > rate_swiss && rate_btc > rate_sam && rate_btc > rate_galla && rate
   var color_btc='orange'
 }
 
+// Append Data in Tables 
 
 $(TableSwiss).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="product'+ i +'">'+ ProductName +'</div></td><td><div id="mc-Swiss'+ i +'">'+ mc_swiss +'</div></td><td><div id="cashback-Swiss'+ i +'">'+ cashback_swiss +'</div></td><td><div class="'+ color_swiss +'"  id="rate-Swiss'+ i +'">'+ rate_swiss +' %</div></td></tr>');
 
@@ -721,6 +733,8 @@ $(TableSlima).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'">
 $(TableGalla).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="product'+ i +'">'+ ProductName +'</div></td><td><div id="mc-Galla'+ i +'">'+ mc_galla +'</div></td><td><div id="cashback-Galla'+ i +'">'+ cashback_galla +'</div></td><td><div class="'+ color_galla +'"  id="rate-Galla'+ i +'">'+ rate_galla +' %</div></td><</tr>');
 
 $(TableBtc).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="product'+ i +'">'+ ProductName +'</div></td><td><div id="mc-Btc'+ i +'">'+ mc_btc +'</div></td><td><div id="cashback-Btc'+ i +'">'+ cashback_btc +'</div></td><td><div class="'+ color_btc +'"  id="rate-Btc'+ i +'">'+ rate_btc +' %</div></td></tr>');
+
+// End Append Data
 
 }
 
@@ -736,58 +750,58 @@ $(TableBtc).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><t
         if (x < max_fields) {
             x++;
 
-          $(wrapper).append('<div class="col-des-5 col-tb-5 col-mb-12 margin-bottom5 appended'+ x +' order-des-1"><select class="bottom5 asset-class-dd input" data-index="'+ x +'" required="true" name="Product'+ x +'" id="Product'+ x +'" value="" tabindex="'+ x +'" required style="width: 70%;"><option selected="selected" disabled="disabled">Select Product</option><optgroup label="Coins" class="coins'+ x +'"></optgroup><optgroup label="Small Ingots" class="smal'+ x +'"></optgroup><optgroup label="Large Ingots" class="large'+ x +'"></optgroup><optgroup label="Gold Bars" class="bar'+ x +'"></optgroup></select></div><button class="btn btn-outline-danger delete col-des-1 col-tb-1 col-mb-1 margin-bottom5  appended'+ x +' order-des-1">  X  </button>');
+          $(wrapper).append('<div class="col-des-12 col-tb-12 col-mb-12 margin-bottom5 appended'+ x +' order-des-1"><select class="bottom5 asset-class-dd input" data-index="'+ x +'" required="true" name="Product'+ x +'" id="Product'+ x +'" value="" tabindex="'+ x +'" required style="width: 70%;"><option selected="selected" disabled="disabled">Select Product</option><optgroup label="Coins" class="coins'+ x +'"></optgroup><optgroup label="Small Ingots" class="smal'+ x +'"></optgroup><optgroup label="Large Ingots" class="large'+ x +'"></optgroup><optgroup label="Gold Bars" class="bar'+ x +'"></optgroup></select></div><button class="btn btn-outline-danger delete col-des-12 col-tb-12 col-mb-12 margin-bottom5  appended'+ x +' order-des-1">  X  </button>');
 
-          //call Product Data From Json in Append Button
+          // Call Product Data From Json in Append Button
 
 
-          //Coins
+          // Coins
 
           $.getJSON("coins.json", function(data) {
           var recordid = '';
             $.each(data, function(key, value) {
-              recordid += '<option value="'+value.id+'"data-mcswiss="'+value.mc_swiss+'" data-mcsam="'+value.mc_sam+'" data-mcslima="'+value.mc_slima+'" data-mcgalla="'+value.mc_galla+'" data-mcbtc="'+value.mc_btc+'" data-cashbackswiss="'+ value.cashback_swiss+'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima+'" data-cashbackgalla="'+ value.cashback_galla+'" data-cashbackbtc="'+ value.cashback_btc+'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima+'" data-rategalla="'+ value.rate_galla+'" data-ratebtc="'+ value.rate_btc+'" data-ProductID="'+value.id+'"data-ProductName="'+value.product+'">'+value.product+'</option></optgroup>';
+              recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam +'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
             });
           $(".coins"+x).append(recordid);
           });
 
 
-          //Small Ingots
+          // Small Ingots
 
 
           $.getJSON("smal.json", function(data) {
             var recordid = '';
               $.each(data, function(key, value) {
-                recordid += '<option value="'+value.id+'"data-mcswiss="'+value.mc_swiss+'" data-mcsam="'+value.mc_sam+'" data-mcslima="'+value.mc_slima+'" data-mcgalla="'+value.mc_galla+'" data-mcbtc="'+value.mc_btc+'" data-cashbackswiss="'+ value.cashback_swiss+'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima+'" data-cashbackgalla="'+ value.cashback_galla+'" data-cashbackbtc="'+ value.cashback_btc+'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima+'" data-rategalla="'+ value.rate_galla+'" data-ratebtc="'+ value.rate_btc+'" data-ProductID="'+value.id+'"data-ProductName="'+value.product+'">'+value.product+'</option></optgroup>';
+                recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+  value.cashback_sam +'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
               });
           $(".smal"+x).append(recordid);
           });
 
 
-          //Large Ingots
+          // Large Ingots
 
 
           $.getJSON("large.json", function(data) {
             var recordid = '';
               $.each(data, function(key, value) {
-                recordid += '<option value="'+value.id+'"data-mcswiss="'+value.mc_swiss+'" data-mcsam="'+value.mc_sam+'" data-mcslima="'+value.mc_slima+'" data-mcgalla="'+value.mc_galla+'" data-mcbtc="'+value.mc_btc+'" data-cashbackswiss="'+ value.cashback_swiss+'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima+'" data-cashbackgalla="'+ value.cashback_galla+'" data-cashbackbtc="'+ value.cashback_btc+'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima+'" data-rategalla="'+ value.rate_galla+'" data-ratebtc="'+ value.rate_btc+'" data-ProductID="'+value.id+'"data-ProductName="'+value.product+'">'+value.product+'</option></optgroup>';
+                recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam +'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
               });
           $(".large"+x).append(recordid);
           });
 
 
-          //Bar Ingots
+          // Bar Ingots
 
 
           $.getJSON("bar.json", function(data) {
             var recordid = '';
               $.each(data, function(key, value) {
-                recordid += '<option value="'+value.id+'"data-mcswiss="'+value.mc_swiss+'" data-mcsam="'+value.mc_sam+'" data-mcslima="'+value.mc_slima+'" data-mcgalla="'+value.mc_galla+'" data-mcbtc="'+value.mc_btc+'" data-cashbackswiss="'+ value.cashback_swiss+'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima+'" data-cashbackgalla="'+ value.cashback_galla+'" data-cashbackbtc="'+ value.cashback_btc+'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima+'" data-rategalla="'+ value.rate_galla+'" data-ratebtc="'+ value.rate_btc+'" data-ProductID="'+value.id+'"data-ProductName="'+value.product+'">'+value.product+'</option></optgroup>';
+                recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam +'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
               });
           $(".bar"+x).append(recordid);
           });
 
-          //End Call Data
+          // End Call Data
 
           }else {
           alert('You Reached the limits')
@@ -804,14 +818,14 @@ $(TableBtc).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><t
     })
 
 
-}); //json
+}); // Json
 
 
-}); //ready
+}); // Ready
 
 
 
-});
+}); // Function
 
 
 
