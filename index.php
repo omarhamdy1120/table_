@@ -1,13 +1,12 @@
-<?php include_once("db_config.php"); ?>
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         
         <meta charset="utf-8">
-<meta name="title" content="DahabMasr LTD - Home page">
+<meta name="title" content="DahabMasr LTD - Comparison">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
-<title>DahabMasr LTD - Home page</title>
+<title>DahabMasr LTD - Comparison</title>
 <link rel="stylesheet" type="text/css" media="all" href="styles-m.css">
 <link rel="stylesheet" type="text/css" media="all" href="style.css">
 <link rel="stylesheet" type="text/css" media="all" href="styles.css">
@@ -93,59 +92,20 @@
 
 <option selected="selected" disabled="disabled">Select Product</option>
 
-<optgroup label="Coins">
-<?php
-  $sql = "SELECT * FROM coins";
-  $resultset = mysqli_query($conn, $sql);
-  while( $rows = mysqli_fetch_assoc($resultset) ) { 
-  ?>
-
-<option value="<?php echo $rows["id"]; ?>"data-mcswiss="<?php echo $rows["mc_swiss"]; ?>" data-mcsam="<?php echo $rows["mc_sam"]; ?>" data-mcslima="<?php echo $rows["mc_slima"]; ?>" data-mcgalla="<?php echo $rows["mc_galla"]; ?>" data-mcbtc="<?php echo $rows["mc_btc"]; ?>"data-cashbackswiss="<?php echo $rows["cashback_swiss"]; ?>"data-cashbacksam="<?php echo $rows["cashback_sam"]; ?>"data-cashbackslima="<?php echo $rows["cashback_slima"]; ?>"data-cashbackgalla="<?php echo $rows["cashback_galla"]; ?>"data-cashbackbtc="<?php echo $rows["cashback_btc"]; ?>"data-rateswiss="<?php echo $rows["rate_swiss"]; ?>"data-ratesam="<?php echo $rows["rate_sam"]; ?>"data-rateslima="<?php echo $rows["rate_slima"]; ?>"data-rategalla="<?php echo $rows["rate_galla"]; ?>"data-ratebtc="<?php echo $rows["rate_btc"]; ?>" data-ProductID="<?php echo $rows["id"]; ?>" data-ProductName="<?php echo $rows["product"]; ?>"><?php echo $rows["product"]; ?></option>
-<?php }	?>
-
-
+<optgroup label="Coins" class="coins0">
+  <!--This Coins Data-->
 </optgroup>
 
-<optgroup label="Small Ingots">
-
-<!-- Enter Small Ingots Option here -->
-<?php
-$sql = "SELECT * FROM small";
-$resultset = mysqli_query($conn, $sql);
-while( $rows = mysqli_fetch_assoc($resultset) ) { ?>
-
-<option value="<?php echo $rows["id"]; ?>" data-mcSwiss="<?php echo $rows["mc_swiss"]; ?>" data-mcSam="<?php echo $rows["mc_sam"]; ?>" data-mcSlima="<?php echo $rows["mc_slima"]; ?>" data-mcGalla="<?php echo $rows["mc_galla"]; ?>" data-mcBtc="<?php echo $rows["mc_btc"]; ?>"data-cashbackSwiss="<?php echo $rows["cashback_swiss"]; ?>"data-cashbackSam="<?php echo $rows["cashback_sam"]; ?>"data-cashbackSlima="<?php echo $rows["cashback_slima"]; ?>"data-cashbackGalla="<?php echo $rows["cashback_galla"]; ?>"data-cashbackBtc="<?php echo $rows["cashback_btc"]; ?>"data-rateSwiss="<?php echo $rows["rate_swiss"]; ?>"data-rateSam="<?php echo $rows["rate_sam"]; ?>"data-rateSlima="<?php echo $rows["rate_slima"]; ?>"data-rateGalla="<?php echo $rows["rate_galla"]; ?>"data-rateBtc="<?php echo $rows["rate_btc"]; ?>" data-ProductID="<?php echo $rows["id"]; ?>" data-ProductName="<?php echo $rows["product"]; ?>"><?php echo $rows["product"]; ?>
-</option>
-<?php }	?>
-
-
+<optgroup label="Small Ingots" class="smal0">
+  <!--This Small Data-->
 </optgroup>
 
-<optgroup label="Large Ingots">
-<!-- Enter  Large Ingots Option here -->
-<?php
-$sql = "SELECT * FROM large";
-$resultset = mysqli_query($conn, $sql);
-while( $rows = mysqli_fetch_assoc($resultset) ) { ?>
+<optgroup label="Large Ingots" class="large0">
 
-<option value="<?php echo $rows["id"]; ?>" data-mcSwiss="<?php echo $rows["mc_swiss"]; ?>" data-mcSam="<?php echo $rows["mc_sam"]; ?>" data-mcSlima="<?php echo $rows["mc_slima"]; ?>" data-mcGalla="<?php echo $rows["mc_galla"]; ?>" data-mcBtc="<?php echo $rows["mc_btc"]; ?>"data-cashbackSwiss="<?php echo $rows["cashback_swiss"]; ?>"data-cashbackSam="<?php echo $rows["cashback_sam"]; ?>"data-cashbackSlima="<?php echo $rows["cashback_slima"]; ?>"data-cashbackGalla="<?php echo $rows["cashback_galla"]; ?>"data-cashbackBtc="<?php echo $rows["cashback_btc"]; ?>"data-rateSwiss="<?php echo $rows["rate_swiss"]; ?>"data-rateSam="<?php echo $rows["rate_sam"]; ?>"data-rateSlima="<?php echo $rows["rate_slima"]; ?>"data-rateGalla="<?php echo $rows["rate_galla"]; ?>"data-rateBtc="<?php echo $rows["rate_btc"]; ?>" data-ProductID="<?php echo $rows["id"]; ?>" data-ProductName="<?php echo $rows["product"]; ?>"><?php echo $rows["product"]; ?>
-</option>
-<?php }	?>
-
+  <!--This Large Data-->
 </optgroup>
 
-<optgroup label="Gold Bars">
-
-<!-- Enter Gold Bars Option here -->
-<?php
-$sql = "SELECT * FROM bar";
-$resultset = mysqli_query($conn, $sql);
-while( $rows = mysqli_fetch_assoc($resultset) ) { ?>
-
-<option value="<?php echo $rows["id"]; ?>" data-mcSwiss="<?php echo $rows["mc_swiss"]; ?>" data-mcSam="<?php echo $rows["mc_sam"]; ?>" data-mcSlima="<?php echo $rows["mc_slima"]; ?>" data-mcGalla="<?php echo $rows["mc_galla"]; ?>" data-mcBtc="<?php echo $rows["mc_btc"]; ?>"data-cashbackSwiss="<?php echo $rows["cashback_swiss"]; ?>"data-cashbackSam="<?php echo $rows["cashback_sam"]; ?>"data-cashbackSlima="<?php echo $rows["cashback_slima"]; ?>"data-cashbackGalla="<?php echo $rows["cashback_galla"]; ?>"data-cashbackBtc="<?php echo $rows["cashback_btc"]; ?>"data-rateSwiss="<?php echo $rows["rate_swiss"]; ?>"data-rateSam="<?php echo $rows["rate_sam"]; ?>"data-rateSlima="<?php echo $rows["rate_slima"]; ?>"data-rateGalla="<?php echo $rows["rate_galla"]; ?>"data-rateBtc="<?php echo $rows["rate_btc"]; ?>" data-ProductID="<?php echo $rows["id"]; ?>" data-ProductName="<?php echo $rows["product"]; ?>"><?php echo $rows["product"]; ?>
-</option>
-<?php }	?>
-
+<optgroup label="Gold Bars" class="bar0">
 </optgroup>
 
 </select>
@@ -440,7 +400,7 @@ while( $rows = mysqli_fetch_assoc($resultset) ) { ?>
 
 Note that the resulting performance of various investment outcomes are 
 hypothetical in nature, may not reflect actual investment results and 
-are not guarantees of future results. Dahab Masr 
+are not guarantees of future results. (Dahab Masr) 
 
 </small>
 
@@ -457,12 +417,6 @@ are not guarantees of future results. Dahab Masr
 </div>
 
 </div>
-
-
-
-
-
-
 
 
 
@@ -562,11 +516,53 @@ var TableSam = $(".sam-inner");
 var TableSlima = $(".slima-inner");
 var TableGalla = $(".galla-inner");
 var TableBtc = $(".btc-inner");
-var DivTest = $("#calcs");
 var add_button = $(".add_form_field");
 var x = 0;
 
+//call Product Data From Json
 
+//Coins
+
+$.getJSON("coins.json", function(data) {
+  var recordid = '';
+    $.each(data, function(key, value) {
+      recordid += '<option value="'+value.id+'"data-mcswiss="'+value.mc_swiss+'" data-mcsam="'+value.mc_sam+'" data-mcslima="'+value.mc_slima+'" data-mcgalla="'+value.mc_galla+'" data-mcbtc="'+value.mc_btc+'" data-cashbackswiss="'+ value.cashback_swiss+'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima+'" data-cashbackgalla="'+ value.cashback_galla+'" data-cashbackbtc="'+ value.cashback_btc+'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima+'" data-rategalla="'+ value.rate_galla+'" data-ratebtc="'+ value.rate_btc+'" data-ProductID="'+value.id+'"data-ProductName="'+value.product+'">'+value.product+'</option></optgroup>';
+    });
+$(".coins"+x).append(recordid);
+});
+
+//Small Ingots
+
+$.getJSON("smal.json", function(data) {
+  var recordid = '';
+    $.each(data, function(key, value) {
+      recordid += '<option value="'+value.id+'"data-mcswiss="'+value.mc_swiss+'" data-mcsam="'+value.mc_sam+'" data-mcslima="'+value.mc_slima+'" data-mcgalla="'+value.mc_galla+'" data-mcbtc="'+value.mc_btc+'" data-cashbackswiss="'+ value.cashback_swiss+'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima+'" data-cashbackgalla="'+ value.cashback_galla+'" data-cashbackbtc="'+ value.cashback_btc+'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima+'" data-rategalla="'+ value.rate_galla+'" data-ratebtc="'+ value.rate_btc+'" data-ProductID="'+value.id+'"data-ProductName="'+value.product+'">'+value.product+'</option></optgroup>';
+    });
+$(".smal"+x).append(recordid);
+});
+
+//Large Ingots
+
+$.getJSON("large.json", function(data) {
+  var recordid = '';
+    $.each(data, function(key, value) {
+      recordid += '<option value="'+value.id+'"data-mcswiss="'+value.mc_swiss+'" data-mcsam="'+value.mc_sam+'" data-mcslima="'+value.mc_slima+'" data-mcgalla="'+value.mc_galla+'" data-mcbtc="'+value.mc_btc+'" data-cashbackswiss="'+ value.cashback_swiss+'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima+'" data-cashbackgalla="'+ value.cashback_galla+'" data-cashbackbtc="'+ value.cashback_btc+'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima+'" data-rategalla="'+ value.rate_galla+'" data-ratebtc="'+ value.rate_btc+'" data-ProductID="'+value.id+'"data-ProductName="'+value.product+'">'+value.product+'</option></optgroup>';
+    });
+$(".large"+x).append(recordid);
+});
+
+
+//Bar Ingots
+
+$.getJSON("bar.json", function(data) {
+  var recordid = '';
+    $.each(data, function(key, value) {
+      recordid += '<option value="'+value.id+'"data-mcswiss="'+value.mc_swiss+'" data-mcsam="'+value.mc_sam+'" data-mcslima="'+value.mc_slima+'" data-mcgalla="'+value.mc_galla+'" data-mcbtc="'+value.mc_btc+'" data-cashbackswiss="'+ value.cashback_swiss+'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima+'" data-cashbackgalla="'+ value.cashback_galla+'" data-cashbackbtc="'+ value.cashback_btc+'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima+'" data-rategalla="'+ value.rate_galla+'" data-ratebtc="'+ value.rate_btc+'" data-ProductID="'+value.id+'"data-ProductName="'+value.product+'">'+value.product+'</option></optgroup>';
+    });
+$(".bar"+x).append(recordid);
+});
+
+//End Call Data
 
 function checkInputs() {
   var isValid = true;
@@ -596,7 +592,7 @@ checkInputs();
 $(document).change( function (e) {
 checkInputs();
 e.preventDefault();
-$('.delete').prop('disabled', true);
+$('.delete').prop('disabled', false);
 
 
 for( var i = 0; i <= x; i++ ) {
@@ -619,6 +615,8 @@ var rate_sam =  $('select[name=Product'+ i +']').find('option:selected').data('r
 var rate_slima =  $('select[name=Product'+ i +']').find('option:selected').data('rateslima');
 var rate_galla =  $('select[name=Product'+ i +']').find('option:selected').data('rategalla');
 var rate_btc =  $('select[name=Product'+ i +']').find('option:selected').data('ratebtc');
+
+// Change N/A to Make it Integer
 
 if(rate_swiss=="N/A"){
   rate_swiss=0;
@@ -711,6 +709,7 @@ if(rate_btc > rate_swiss && rate_btc > rate_sam && rate_btc > rate_galla && rate
   var color_btc='orange'
 }
 
+// Append Data in Tables 
 
 $(TableSwiss).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="product'+ i +'">'+ ProductName +'</div></td><td><div id="mc-Swiss'+ i +'">'+ mc_swiss +'</div></td><td><div id="cashback-Swiss'+ i +'">'+ cashback_swiss +'</div></td><td><div class="'+ color_swiss +'"  id="rate-Swiss'+ i +'">'+ rate_swiss +' %</div></td></tr>');
 
@@ -721,6 +720,8 @@ $(TableSlima).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'">
 $(TableGalla).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="product'+ i +'">'+ ProductName +'</div></td><td><div id="mc-Galla'+ i +'">'+ mc_galla +'</div></td><td><div id="cashback-Galla'+ i +'">'+ cashback_galla +'</div></td><td><div class="'+ color_galla +'"  id="rate-Galla'+ i +'">'+ rate_galla +' %</div></td><</tr>');
 
 $(TableBtc).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="product'+ i +'">'+ ProductName +'</div></td><td><div id="mc-Btc'+ i +'">'+ mc_btc +'</div></td><td><div id="cashback-Btc'+ i +'">'+ cashback_btc +'</div></td><td><div class="'+ color_btc +'"  id="rate-Btc'+ i +'">'+ rate_btc +' %</div></td></tr>');
+
+// End Append Data
 
 }
 
@@ -736,7 +737,58 @@ $(TableBtc).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><t
         if (x < max_fields) {
             x++;
 
-          $(wrapper).append('<div class="col-des-5 col-tb-5 col-mb-12 margin-bottom5 appended'+ x +' order-des-1"><select class="bottom5 asset-class-dd input" data-index="'+ x +'" required="true" name="Product'+ x +'" id="Product'+ x +'" value="" tabindex="'+ x +'" required style="width: 70%;"><option selected disabled>Select Product</option><optgroup label="Coins"><?php $sql = "SELECT * FROM coins"; $resultset = mysqli_query($conn, $sql); while( $rows = mysqli_fetch_assoc($resultset) ) { ?><option value="<?php echo $rows["id"]; ?>" data-mcSwiss="<?php echo $rows["mc_swiss"]; ?>" data-mcSam="<?php echo $rows["mc_sam"]; ?>" data-mcSlima="<?php echo $rows["mc_slima"]; ?>" data-mcGalla="<?php echo $rows["mc_galla"]; ?>" data-mcBtc="<?php echo $rows["mc_btc"]; ?>"data-cashbackSwiss="<?php echo $rows["cashback_swiss"]; ?>"data-cashbackSam="<?php echo $rows["cashback_sam"]; ?>"data-cashbackSlima="<?php echo $rows["cashback_slima"]; ?>"data-cashbackGalla="<?php echo $rows["cashback_galla"]; ?>"data-cashbackBtc="<?php echo $rows["cashback_btc"]; ?>"data-rateSwiss="<?php echo $rows["rate_swiss"]; ?>"data-rateSam="<?php echo $rows["rate_sam"]; ?>"data-rateSlima="<?php echo $rows["rate_slima"]; ?>"data-rateGalla="<?php echo $rows["rate_galla"]; ?>"data-rateBtc="<?php echo $rows["rate_btc"]; ?>" data-ProductID="<?php echo $rows["id"]; ?>"  data-ProductName="<?php echo $rows["product"]; ?>"><?php echo $rows["product"]; ?></option><?php }	?></optgroup><optgroup label="Small Ingots"><?php $sql = "SELECT * FROM small"; $resultset = mysqli_query($conn, $sql); while( $rows = mysqli_fetch_assoc($resultset) ) { ?><option value="<?php echo $rows["id"]; ?>" data-mcSwiss="<?php echo $rows["mc_swiss"]; ?>" data-mcSam="<?php echo $rows["mc_sam"]; ?>" data-mcSlima="<?php echo $rows["mc_slima"]; ?>" data-mcGalla="<?php echo $rows["mc_galla"]; ?>" data-mcBtc="<?php echo $rows["mc_btc"]; ?>"data-cashbackSwiss="<?php echo $rows["cashback_swiss"]; ?>"data-cashbackSam="<?php echo $rows["cashback_sam"]; ?>"data-cashbackSlima="<?php echo $rows["cashback_slima"]; ?>"data-cashbackGalla="<?php echo $rows["cashback_galla"]; ?>"data-cashbackBtc="<?php echo $rows["cashback_btc"]; ?>"data-rateSwiss="<?php echo $rows["rate_swiss"]; ?>"data-rateSam="<?php echo $rows["rate_sam"]; ?>"data-rateSlima="<?php echo $rows["rate_slima"]; ?>"data-rateGalla="<?php echo $rows["rate_galla"]; ?>"data-rateBtc="<?php echo $rows["rate_btc"]; ?>" data-ProductID="<?php echo $rows["id"]; ?>"  data-ProductName="<?php echo $rows["product"]; ?>"><?php echo $rows["product"]; ?></option><?php }	?></optgroup><optgroup label="Large Ingots"><?php $sql = "SELECT * FROM large"; $resultset = mysqli_query($conn, $sql); while( $rows = mysqli_fetch_assoc($resultset) ) { ?><option value="<?php echo $rows["id"]; ?>" data-mcSwiss="<?php echo $rows["mc_swiss"]; ?>" data-mcSam="<?php echo $rows["mc_sam"]; ?>" data-mcSlima="<?php echo $rows["mc_slima"]; ?>" data-mcGalla="<?php echo $rows["mc_galla"]; ?>" data-mcBtc="<?php echo $rows["mc_btc"]; ?>"data-cashbackSwiss="<?php echo $rows["cashback_swiss"]; ?>"data-cashbackSam="<?php echo $rows["cashback_sam"]; ?>"data-cashbackSlima="<?php echo $rows["cashback_slima"]; ?>"data-cashbackGalla="<?php echo $rows["cashback_galla"]; ?>"data-cashbackBtc="<?php echo $rows["cashback_btc"]; ?>"data-rateSwiss="<?php echo $rows["rate_swiss"]; ?>"data-rateSam="<?php echo $rows["rate_sam"]; ?>"data-rateSlima="<?php echo $rows["rate_slima"]; ?>"data-rateGalla="<?php echo $rows["rate_galla"]; ?>"data-rateBtc="<?php echo $rows["rate_btc"]; ?>" data-ProductID="<?php echo $rows["id"]; ?>"  data-ProductName="<?php echo $rows["product"]; ?>"><?php echo $rows["product"]; ?></option><?php }	?></optgroup><optgroup label="Gold Bars"><?php $sql = "SELECT * FROM bar";$resultset = mysqli_query($conn, $sql);while( $rows = mysqli_fetch_assoc($resultset) ) { ?><option value="<?php echo $rows["id"]; ?>" data-mcSwiss="<?php echo $rows["mc_swiss"]; ?>" data-mcSam="<?php echo $rows["mc_sam"]; ?>" data-mcSlima="<?php echo $rows["mc_slima"]; ?>" data-mcGalla="<?php echo $rows["mc_galla"]; ?>" data-mcBtc="<?php echo $rows["mc_btc"]; ?>"data-cashbackSwiss="<?php echo $rows["cashback_swiss"]; ?>"data-cashbackSam="<?php echo $rows["cashback_sam"]; ?>"data-cashbackSlima="<?php echo $rows["cashback_slima"]; ?>"data-cashbackGalla="<?php echo $rows["cashback_galla"]; ?>"data-cashbackBtc="<?php echo $rows["cashback_btc"]; ?>"data-rateSwiss="<?php echo $rows["rate_swiss"]; ?>"data-rateSam="<?php echo $rows["rate_sam"]; ?>"data-rateSlima="<?php echo $rows["rate_slima"]; ?>"data-rateGalla="<?php echo $rows["rate_galla"]; ?>"data-rateBtc="<?php echo $rows["rate_btc"]; ?>"data-ProductID="<?php echo $rows["id"]; ?>" data-ProductName="<?php echo $rows["product"]; ?>"><?php echo $rows["product"]; ?></option><?php }	?></optgroup></select></div><button class="btn btn-outline-danger delete col-des-1 col-tb-1 col-mb-1 margin-bottom5  appended'+ x +' order-des-1">  X  </button>');
+          $(wrapper).append('<div class="col-des-5 col-tb-5 col-mb-12 margin-bottom5 appended'+ x +' order-des-1"><select class="bottom5 asset-class-dd input" data-index="'+ x +'" required="true" name="Product'+ x +'" id="Product'+ x +'" value="" tabindex="'+ x +'" required style="width: 70%;"><option selected="selected" disabled="disabled">Select Product</option><optgroup label="Coins" class="coins'+ x +'"></optgroup><optgroup label="Small Ingots" class="smal'+ x +'"></optgroup><optgroup label="Large Ingots" class="large'+ x +'"></optgroup><optgroup label="Gold Bars" class="bar'+ x +'"></optgroup></select></div><button class="btn btn-outline-danger delete col-des-1 col-tb-1 col-mb-1 margin-bottom5  appended'+ x +' order-des-1">  X  </button>');
+
+          //Call Product Data From Json in Append Button
+
+
+          //Coins
+
+          $.getJSON("coins.json", function(data) {
+          var recordid = '';
+            $.each(data, function(key, value) {
+              recordid += '<option value="'+value.id+'"data-mcswiss="'+value.mc_swiss+'" data-mcsam="'+value.mc_sam+'" data-mcslima="'+value.mc_slima+'" data-mcgalla="'+value.mc_galla+'" data-mcbtc="'+value.mc_btc+'" data-cashbackswiss="'+ value.cashback_swiss+'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima+'" data-cashbackgalla="'+ value.cashback_galla+'" data-cashbackbtc="'+ value.cashback_btc+'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima+'" data-rategalla="'+ value.rate_galla+'" data-ratebtc="'+ value.rate_btc+'" data-ProductID="'+value.id+'"data-ProductName="'+value.product+'">'+value.product+'</option></optgroup>';
+            });
+          $(".coins"+x).append(recordid);
+          });
+
+
+          //Small Ingots
+
+
+          $.getJSON("smal.json", function(data) {
+            var recordid = '';
+              $.each(data, function(key, value) {
+                recordid += '<option value="'+value.id+'"data-mcswiss="'+value.mc_swiss+'" data-mcsam="'+value.mc_sam+'" data-mcslima="'+value.mc_slima+'" data-mcgalla="'+value.mc_galla+'" data-mcbtc="'+value.mc_btc+'" data-cashbackswiss="'+ value.cashback_swiss+'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima+'" data-cashbackgalla="'+ value.cashback_galla+'" data-cashbackbtc="'+ value.cashback_btc+'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima+'" data-rategalla="'+ value.rate_galla+'" data-ratebtc="'+ value.rate_btc+'" data-ProductID="'+value.id+'"data-ProductName="'+value.product+'">'+value.product+'</option></optgroup>';
+              });
+          $(".smal"+x).append(recordid);
+          });
+
+
+          //Large Ingots
+
+
+          $.getJSON("large.json", function(data) {
+            var recordid = '';
+              $.each(data, function(key, value) {
+                recordid += '<option value="'+value.id+'"data-mcswiss="'+value.mc_swiss+'" data-mcsam="'+value.mc_sam+'" data-mcslima="'+value.mc_slima+'" data-mcgalla="'+value.mc_galla+'" data-mcbtc="'+value.mc_btc+'" data-cashbackswiss="'+ value.cashback_swiss+'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima+'" data-cashbackgalla="'+ value.cashback_galla+'" data-cashbackbtc="'+ value.cashback_btc+'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima+'" data-rategalla="'+ value.rate_galla+'" data-ratebtc="'+ value.rate_btc+'" data-ProductID="'+value.id+'"data-ProductName="'+value.product+'">'+value.product+'</option></optgroup>';
+              });
+          $(".large"+x).append(recordid);
+          });
+
+
+          //Bar Ingots
+
+
+          $.getJSON("bar.json", function(data) {
+            var recordid = '';
+              $.each(data, function(key, value) {
+                recordid += '<option value="'+value.id+'"data-mcswiss="'+value.mc_swiss+'" data-mcsam="'+value.mc_sam+'" data-mcslima="'+value.mc_slima+'" data-mcgalla="'+value.mc_galla+'" data-mcbtc="'+value.mc_btc+'" data-cashbackswiss="'+ value.cashback_swiss+'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima+'" data-cashbackgalla="'+ value.cashback_galla+'" data-cashbackbtc="'+ value.cashback_btc+'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima+'" data-rategalla="'+ value.rate_galla+'" data-ratebtc="'+ value.rate_btc+'" data-ProductID="'+value.id+'"data-ProductName="'+value.product+'">'+value.product+'</option></optgroup>';
+              });
+          $(".bar"+x).append(recordid);
+          });
+
+          //End Call Data
 
         }else {
           alert('You Reached the limits')
@@ -760,7 +812,7 @@ $(TableBtc).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><t
 
 
 
-});
+}); //function
 
 
 
