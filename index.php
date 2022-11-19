@@ -54,21 +54,19 @@
   
 <!-- Button Swipe Language-->
 
-<a href="index_ar.php" style="text-decoration: none;"><button type="button" class="btn btn-outline-dark">AR</button></a>
+<a href="index_ar.php" style="text-decoration: none; margin-right:auto;"><button type="button" class="btn btn-outline-dark">AR</button></a>
 
 <div class="panel-block-row  panel-block col-des-12 block762 col-tb-12 col-mb-12">
 
 
-<div >
+<div>
 
 <div class="text-center">
 
 <h1 class="margin-bottom50" >Investment Products Comparison</h1>
 
 </div>
-
 </div>
-
 </div>
 
 <div class="col-des-6 col-tb-6 col-mb-12 margin-bottom30 order-des-1 calculate">
@@ -140,7 +138,7 @@
 
 </button>
 
-<button class="add_form_field action btn btn-dark btn-sm input">Add Another Product&nbsp; 
+<button class="add_form_field action btn btn-dark btn-sm input">Add Product&nbsp; 
 
       <span style="font-size:16px; font-weight:bold;">+</span>
 
@@ -151,26 +149,12 @@
 
 
 </div>
-
 </div>
-
-
-
-
-
 </div>
-
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
-
-
 
 
 <div class="col-des-12 col-tb-12 col-mb-12 margin-bottom30 order-des-2">
@@ -192,7 +176,6 @@
 <tr>
 
 <th class="swiss text-center" colspan="6" width="50%"><img src="swiss.png" alt="Swiss Gold" width="90" height="40"></th>
-
 <th class="sam text-center" colspan="6" width="50%"><img src="sam.png" alt="Swiss Gold" width="90" height="40"></th>
 <th class="slima text-center" colspan="6" width="50%"><img src="selema.png" alt="Swiss Gold" width="90" height="40"></th>
 <th class="galla text-center" colspan="6" width="50%"><img src="galla.png" alt="Swiss Gold" width="90" height="40"></th>
@@ -217,9 +200,7 @@
 
 <th>Product</th>
 <th>Making Charges</th>
-
 <th>Cash Back</th>
-
 <th>Rate%</th>
 
 </tr>
@@ -248,9 +229,7 @@
 
 <th>Product</th>
 <th>Making Charges</th>
-
 <th>Cash Back</th>
-
 <th>Rate%</th>
 
 
@@ -282,9 +261,7 @@
 
 <th>Product</th>
 <th>Making Charges</th>
-
 <th>Cash Back</th>
-
 <th>Rate%</th>
 
 
@@ -315,9 +292,7 @@
 
 <th>Product</th>
 <th>Making Charges</th>
-
 <th>Cash Back</th>
-
 <th>Rate%</th>
 
 
@@ -347,9 +322,7 @@
 
 <th>Product</th>
 <th>Making Charges</th>
-
 <th>Cash Back</th>
-
 <th>Rate%</th>
 
 
@@ -380,17 +353,11 @@
 
 
 </table>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
 
 
@@ -419,38 +386,17 @@ are not guarantees of future results. (Dahab Masr)
 
 
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
-
-
 </div>
-
 </div>
-
 </div>
-
-
-
 </div>
-
 </div>
-
 </div>
-
-
-
-
-
-    
 
 <script>
 	var BASE_URL = WEB_URL = 'https://dahabmasr.com/';
@@ -526,46 +472,51 @@ var x = 0;
 
 // Call Product Data From Json
 
-// Coins
 
-$.getJSON("coins.json", function(data) {
-  var recordid = '';
-    $.each(data, function(key, value) {
-      recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
-    });
-$(".coins"+ x).append(recordid);
-});
+function fetch_json(){
+  $.getJSON("coins.json", function(data) {
+    var recordid = '';
+      $.each(data, function(key, value) {
+        recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss+'" data-ratesam="'+ value.rate_sam+'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
+      });
+  $(".coins"+ x).append(recordid);
+  });
 
-// Small Ingots
+  // Small Ingots
 
-$.getJSON("smal.json", function(data) {
-  var recordid = '';
-    $.each(data, function(key, value) {
-      recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+value.product +'</option></optgroup>';
-    });
-$(".smal"+ x).append(recordid);
-});
+  $.getJSON("smal.json", function(data) {
+    var recordid = '';
+      $.each(data, function(key, value) {
+        recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam+'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+value.product +'</option></optgroup>';
+      });
+  $(".smal"+ x).append(recordid);
+  });
 
-// Large Ingots
+  // Large Ingots
 
-$.getJSON("large.json", function(data) {
-  var recordid = '';
-    $.each(data, function(key, value) {
-      recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam +'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
-    });
-$(".large"+ x).append(recordid);
-});
+  $.getJSON("large.json", function(data) {
+    var recordid = '';
+      $.each(data, function(key, value) {
+        recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam +'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
+      });
+  $(".large"+ x).append(recordid);
+  });
 
 
-// Bar Ingots
+  // Bar Ingots
 
-$.getJSON("bar.json", function(data) {
-  var recordid = '';
-    $.each(data, function(key, value) {
-      recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam +'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
-    });
-$(".bar"+ x).append(recordid);
-});
+  $.getJSON("bar.json", function(data) {
+    var recordid = '';
+      $.each(data, function(key, value) {
+        recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam +'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
+      });
+  $(".bar"+ x).append(recordid);
+  });
+}
+
+//Call Function To Fetch Data
+
+fetch_json();
 
 // End Call Data
 
@@ -603,6 +554,7 @@ $('.delete').prop('disabled', false);
 for( var i = 0; i <= x; i++ ) {
 $('.rslt'+ i).remove();
 
+
 var ProductID =  parseInt($('select[name=Product'+ i +']').find('option:selected').val());
 var ProductName =  $('select[name=Product'+ i +']').find('option:selected').data('productname');
 var mc_swiss =  $('select[name=Product'+ i +']').find('option:selected').data('mcswiss');
@@ -620,6 +572,7 @@ var rate_sam =  $('select[name=Product'+ i +']').find('option:selected').data('r
 var rate_slima =  $('select[name=Product'+ i +']').find('option:selected').data('rateslima');
 var rate_galla =  $('select[name=Product'+ i +']').find('option:selected').data('rategalla');
 var rate_btc =  $('select[name=Product'+ i +']').find('option:selected').data('ratebtc');
+
 
 // Change N/A to Make it Integer
 
@@ -744,54 +697,9 @@ $(TableBtc).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><t
 
           $(wrapper).append('<div class="col-des-12 col-tb-12 col-mb-12 margin-bottom5 appended'+ x +' order-des-1"><select class="margin-bottom5 input" data-index="'+ x +'" required="true" name="Product'+ x +'" id="Product'+ x +'" value="" tabindex="'+ x +'" required style="width: 70%;"><option selected="selected" disabled="disabled">Select Product</option><optgroup label="Coins" class="coins'+ x +'"></optgroup><optgroup label="Small Ingots" class="smal'+ x +'"></optgroup><optgroup label="Large Ingots" class="large'+ x +'"></optgroup><optgroup label="Gold Bars" class="bar'+ x +'"></optgroup></select></div><button class="btn btn-outline-danger delete col-des-12 col-tb-12 col-mb-12 margin-bottom5  appended'+ x +' order-des-1">  X  </button>');
 
-          // Call Product Data From Json in Append Button
+          //Call Function To Fetch Data
 
-
-          // Coins
-
-          $.getJSON("coins.json", function(data) {
-          var recordid = '';
-            $.each(data, function(key, value) {
-              recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam +'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
-            });
-          $(".coins"+ x).append(recordid);
-          });
-
-
-          // Small Ingots
-
-
-          $.getJSON("smal.json", function(data) {
-            var recordid = '';
-              $.each(data, function(key, value) {
-                recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam +'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
-              });
-          $(".smal"+ x).append(recordid);
-          });
-
-
-          // Large Ingots
-
-
-          $.getJSON("large.json", function(data) {
-            var recordid = '';
-              $.each(data, function(key, value) {
-                recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam +'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
-              });
-          $(".large"+ x).append(recordid);
-          });
-
-
-          // Bar Ingots
-
-
-          $.getJSON("bar.json", function(data) {
-            var recordid = '';
-              $.each(data, function(key, value) {
-                recordid += '<option value="'+ value.id +'"data-mcswiss="'+ value.mc_swiss +'" data-mcsam="'+ value.mc_sam +'" data-mcslima="'+ value.mc_slima +'" data-mcgalla="'+ value.mc_galla +'" data-mcbtc="'+ value.mc_btc +'" data-cashbackswiss="'+ value.cashback_swiss +'" data-cashbacksam="'+ value.cashback_sam +'" data-cashbackslima="'+ value.cashback_slima +'" data-cashbackgalla="'+ value.cashback_galla +'" data-cashbackbtc="'+ value.cashback_btc +'" data-rateswiss="'+ value.rate_swiss +'" data-ratesam="'+ value.rate_sam +'" data-rateslima="'+ value.rate_slima +'" data-rategalla="'+ value.rate_galla +'" data-ratebtc="'+ value.rate_btc +'" data-ProductID="'+ value.id +'"data-ProductName="'+ value.product +'">'+ value.product +'</option></optgroup>';
-              });
-          $(".bar"+ x).append(recordid);
-          });
+          fetch_json();
 
           // End Call Data
 
@@ -811,12 +719,7 @@ $(TableBtc).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><t
 
 
 }); // Json
-
-
 }); // Ready
-
-
-
 }); // Function
 
 
